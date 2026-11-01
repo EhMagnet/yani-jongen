@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YANI JONGEN</title>
+  <meta name="description" content="Yani Jongen — portfolio">
+  <link rel="icon" type="image/jpeg" href="assets/cheese.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- top bar -->
+  <header class="topbar">
+    <a href="#top" class="topbar__logo">YANI JONGEN</a>
+    <nav class="topbar__nav">
+      <a href="#socials">SOCIALS</a>
+      <a href="#over">OVER</a>
+      <a href="#werk">WERK</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" id="top">
+    <h1 class="hero__title">
+      WAT ALS IK WEL<br>EEN CLOWN ZOU <br> WILLEN ZIJN
+    </h1>
+    <span class="sticker hero__sticker">YANI JONGEN</span>
+    <img class="hero__cheese" src="assets/cheese.jpg" alt="">
+  </section>
+
+  <!-- zigzag marquee ribbon -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon__track" id="ribbon"></div>
+  </div>
+
+  <!-- socials: big tiles with room for an image -->
+  <section class="socials" id="socials">
+    <h2 class="section-title">VIND MIJ</h2>
+    <div class="socials__grid" id="socials-grid"></div>
+  </section>
+
+  <!-- about -->
+  <section class="about" id="over">
+    <h2 class="section-title">OVER MIJ</h2>
+    <div class="about__text">
+      <!-- The first <p> is shown big; every other <p>…</p> is a normal paragraph. -->
+      <p class="about__lead">
+        Yani Jongen is een 19-jarige modeontwerper uit Tilburg.
+      </p>
+      <p>
+        Ze studeert momenteel mode in haar 2e jaar aan de hogeschool van Utrecht
+        voor de kunsten. In een wereld van clichés en stereotypen, onderzoekt ze
+        door middel van humor en absurditeit vraagstukken over identiteit. Ze maakt
+        georganiseerde warboelen die als doel hebben je te laten lachen. Haar
+        ontwerpstijl wordt gekenmerkt door humor, kleur, opvallende prints en
+        overdreven/vergroote vormen.
+      </p>
+      <p>
+        Deze modecollectie bestaat uit vijf ontwerpen waarmee Yani je meeneemt
+        in haar leven als het ‘vreemde eendje’. De collectie gaat over opgroeien in
+        een klein Brabants dorp, terwijl je tegelijkertijd op zoek bent naar wie je
+        echt bent. Het werk praat over de meningen en verwachtingen die anderen over
+        haar hebben en vormt tegelijkertijd een tegenreactie daarop. Het is een ode
+        aan het anders zijn, met als boodschap: “Laat mij het rare eendje maar
+        gewoon zijn.”
+      </p>
+    </div>
+  </section>
+
+  <!-- work carousel (dark section) -->
+  <section class="work" id="werk">
+    <div class="work__head">
+      <h2 class="section-title">DINGEN DIE<br>IK MAAKTE</h2>
+      <div class="work__controls">
+        <button class="arrow" data-dir="-1" aria-label="Vorige">&larr;</button>
+        <button class="arrow" data-dir="1" aria-label="Volgende">&rarr;</button>
+      </div>
+    </div>
+    <ul class="carousel" id="carousel" tabindex="0" aria-label="Projecten"></ul>
+  </section>
+
+  <!-- contact -->
+  <section class="contact" id="contact">
+    <p class="contact__kicker">ZEG HOI</p>
+    <a class="contact__email" id="email-link" href="#"></a>
+    <a class="sticker contact__sticker" id="email-sticker" href="#">MAIL ME ↗</a>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> YANI JONGEN</span>
+    <a href="#top">TERUG NAAR BOVEN ↑</a>
+  </footer>
+
+  <!-- pop-up gallery for projects (filled in by script.js) -->
+  <dialog class="gallery" id="gallery" aria-label="Galerij">
+    <div class="gallery__bar">
+      <h3 class="gallery__title"></h3>
+      <span class="gallery__count"></span>
+      <button class="gallery__close" aria-label="Sluiten">✕</button>
+    </div>
+    <div class="gallery__stage">
+      <button class="gallery__nav gallery__prev" aria-label="Vorige foto">&larr;</button>
+      <div class="gallery__track"></div>
+      <button class="gallery__nav gallery__next" aria-label="Volgende foto">&rarr;</button>
+    </div>
+    <div class="gallery__foot">
+      <p class="gallery__desc"></p>
+      <a class="sticker gallery__link" target="_blank" rel="noopener" href="#">BEKIJK ↗</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
